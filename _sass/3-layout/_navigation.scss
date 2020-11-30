@@ -33,17 +33,17 @@ nav {
     letter-spacing: 1px;
     list-style-type: none;
     cursor: pointer;
-    color: $light-grey;
+    color: $grey;
     padding-left: 10px;
     padding-right: 10px;
     @include flex(row, center, center);
 
     &:hover {
-      border-top: 5px solid $red;
+      border-top: 5px solid $light-blue;
     }
 
     @include mobile {
-      border-top: 5px solid $light-grey;
+      border-top: 5px solid $grey;
     }
     @include tablet {
       border-top: none;
