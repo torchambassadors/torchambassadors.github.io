@@ -3,25 +3,43 @@
 // VARIABLES
 //
 
-// Colors
-$blue: #4183C4;
-
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
-
-// Font stacks
+// FONT
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-// Mobile breakpoints
+// COLORS
+$dark-blue: #145E72;
+$light-blue: #27A9B1;
+$light-grey: #B8CED1;
+$black: #2E2E2E;
+
+// FLEXBOX
+@mixin flex($direction: row, $horizontal: center, $vertical: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+// BREAKPOINTS
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media (min-width: #{$mobile}) {
     @content;
   }
 }
